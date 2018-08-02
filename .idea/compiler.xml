@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="admin-server" />
+        <module name="config-server" />
+        <module name="eureka-server" />
+        <module name="jiu-app" />
+        <module name="jiu-service-a" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin-server" target="1.8" />
+      <module name="base-server" target="1.6" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server" target="1.8" />
+      <module name="jiu-app" target="1.8" />
+      <module name="jiu-service-a" target="1.8" />
+      <module name="jiujiu-master" target="1.6" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
