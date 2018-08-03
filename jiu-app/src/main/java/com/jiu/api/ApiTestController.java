@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
  * Created by lukai on 2018/8/2.
  */
 @RestController
+@RequestMapping("/api")
 public class ApiTestController {
 
     @Autowired

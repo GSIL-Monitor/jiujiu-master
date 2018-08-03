@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/base-server/admin-server/pom.xml" />
         <option value="$PROJECT_DIR$/jiu-app/pom.xml" />
         <option value="$PROJECT_DIR$/jiu-service-a/pom.xml" />
+        <option value="$PROJECT_DIR$/base-server/zull-server/pom.xml" />
       </list>
     </option>
   </component>
