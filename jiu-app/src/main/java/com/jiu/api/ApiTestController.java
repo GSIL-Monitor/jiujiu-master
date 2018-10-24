@@ -25,7 +25,9 @@ public class ApiTestController {
     @RequestMapping(value = "/getMessage",method = {RequestMethod.GET,RequestMethod.POST})
     @ResponseBody
     public String getMessage(){
-        return testClient.getMessage();
+        String res = testClient.getMessage();
+        System.out.println("res===>"+res);
+        return res;
     }
 
     @RequestMapping(value = "/getMessage2",method = {RequestMethod.GET,RequestMethod.POST})
