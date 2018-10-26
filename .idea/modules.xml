@@ -9,7 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/jiu-app/jiu-app.iml" filepath="$PROJECT_DIR$/jiu-app/jiu-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/jiu-user/jiu-user.iml" filepath="$PROJECT_DIR$/jiu-user/jiu-user.iml" />
       <module fileurl="file://$PROJECT_DIR$/jiujiu-master.iml" filepath="$PROJECT_DIR$/jiujiu-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/base-server/zull-server/zull-server.iml" filepath="$PROJECT_DIR$/base-server/zull-server/zull-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-server/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/base-server/zuul-server/zuul-server.iml" />
     </modules>
   </component>
 </project>
