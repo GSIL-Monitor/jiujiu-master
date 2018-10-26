@@ -12,7 +12,7 @@
         <module name="eureka-server" />
         <module name="jiu-app" />
         <module name="jiu-user" />
-        <module name="zull-server" />
+        <module name="zuul-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,7 +24,7 @@
       <module name="jiu-service-a" target="1.8" />
       <module name="jiu-user" target="1.8" />
       <module name="jiujiu-master" target="1.6" />
-      <module name="zull-server" target="1.8" />
+      <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
