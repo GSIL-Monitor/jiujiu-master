@@ -1,5 +1,6 @@
 package com.jiu.contor;
 
+import com.jiu.common.annotation.LogAnnotation;
 import com.jiu.model.User;
 import com.jiu.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,7 @@ public class RegisterController {
     private RegisterService iRegister;
 
     @PostMapping(value = "/addUser")
+    @LogAnnotation
     public int addUser(User user) {
         try {
             int i = iRegister.addUser(user);
