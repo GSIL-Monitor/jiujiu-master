@@ -1,7 +1,7 @@
 package com.jiu.contor;
 
 import com.jiu.model.User;
-import com.jiu.service.IRegister;
+import com.jiu.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RegisterController {
 
     @Autowired
-    private IRegister iRegister;
+    private RegisterService iRegister;
 
     @PostMapping(value = "/addUser")
     public int addUser(User user) {

@@ -10,8 +10,8 @@
     <sql id="Base_Column_List" >
         user_id, user_name, pass_word, phone
     </sql>
-    <insert id="addUser" parameterType="com.jiu.model.User">
-      insert into t_user (user_name,pass_word,phone)
-      VALUES (#{userName},#{passWord},#{phone})
+    <insert id="add" parameterType="com.jiu.model.User">
+      insert into t_user (user_name,pass_word)
+      VALUES (#{userName},#{passWord})
     </insert>
 </mapper>
