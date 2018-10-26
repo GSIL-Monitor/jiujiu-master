@@ -16,7 +16,7 @@
 		<module>eureka-server</module>
 		<module>config-server</module>
 		<module>admin-server</module>
-		<module>zull-server</module>
+		<module>zuul-server</module>
 	</modules>
 
 </project>

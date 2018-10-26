@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.jiu</groupId>
-	<artifactId>zull-server</artifactId>
+	<artifactId>zuul-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>zull-server</name>
+	<name>zuul-server</name>
 	<description>路由网关</description>
 
 	<parent>
