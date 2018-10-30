@@ -5,12 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/base-server/pom.xml" />
-        <option value="$PROJECT_DIR$/base-server/eureka-server/pom.xml" />
-        <option value="$PROJECT_DIR$/base-server/config-server/pom.xml" />
-        <option value="$PROJECT_DIR$/base-server/admin-server/pom.xml" />
-        <option value="$PROJECT_DIR$/jiu-app/pom.xml" />
         <option value="$PROJECT_DIR$/base-server/zull-server/pom.xml" />
-        <option value="$PROJECT_DIR$/jiu-user/pom.xml" />
       </list>
     </option>
   </component>
