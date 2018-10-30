@@ -51,6 +51,10 @@ public class CodeGenerator {
         gc.setOutputDir(projectPath + "/src/main/java");
         gc.setAuthor("lujj");
         gc.setOpen(false);
+        gc.setActiveRecord(true);// 开启 activeRecord 模式
+        gc.setEnableCache(false);// XML 二级缓存
+        gc.setBaseResultMap(true);// XML ResultMap
+        gc.setBaseColumnList(false);// XML columList
         mpg.setGlobalConfig(gc);
 
         // 数据源配置
