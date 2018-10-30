@@ -4,14 +4,17 @@ import com.jiu.common.annotation.LogAnnotation;
 import com.jiu.model.TUser;
 import com.jiu.service.RegisterService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * Created by lukai on 2018/10/26.
  */
-@RestController
+@Controller
 @RequestMapping("/register")
 public class RegisterController {
 
@@ -19,6 +22,7 @@ public class RegisterController {
     private RegisterService iRegister;
 
     @PostMapping(value = "/addUser")
+    @ResponseBody
     @LogAnnotation
     public int addUser(TUser user) {
         try {
@@ -28,5 +32,22 @@ public class RegisterController {
             e.printStackTrace();
         }
         return 0;
+    }
+
+    @PostMapping(value = "/queryAll")
+    @ResponseBody
+    @LogAnnotation
+    public List<TUser> queryAll() {
+        try {
+            return iRegister.queryAll();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @RequestMapping(value = "/toRegister")
+    public String toRegister() {
+        return "test";
     }
 }

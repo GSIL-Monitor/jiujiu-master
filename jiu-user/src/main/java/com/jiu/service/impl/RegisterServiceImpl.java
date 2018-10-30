@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 /**
  * Created by lukai on 2018/10/26.
  */
@@ -21,5 +23,9 @@ public class RegisterServiceImpl implements RegisterService {
     public int addUser(TUser user) throws Exception {
         int i = tUserMapper.insert(user);
         return i;
+    }
+    @Override
+    public List<TUser> queryAll() throws Exception {
+        return tUserMapper.selectList(null);
     }
 }
