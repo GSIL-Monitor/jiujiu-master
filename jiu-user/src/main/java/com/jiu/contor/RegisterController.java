@@ -3,6 +3,7 @@ package com.jiu.contor;
 import com.jiu.common.annotation.LogAnnotation;
 import com.jiu.model.TUser;
 import com.jiu.service.RegisterService;
+import com.jiu.util.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,7 +29,7 @@ public class RegisterController {
         try {
             int i = iRegister.addUser(user);
             return i;
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return 0;
@@ -40,7 +41,7 @@ public class RegisterController {
     public List<TUser> queryAll() {
         try {
             return iRegister.queryAll();
-        }catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return null;
@@ -49,5 +50,16 @@ public class RegisterController {
     @RequestMapping(value = "/toRegister")
     public String toRegister() {
         return "test";
+    }
+
+
+    @RequestMapping(value = "/testSend")
+    @ResponseBody
+    public boolean testSend() {
+        boolean succ = false;
+        succ = MailUtil.send("smtp.exmail.qq.com", "lukai@hanxinbank.com", "hbwhlukai@163.com",
+                "测试", "测试内容", "lukai@hanxinbank.com",
+                "Lu2452204520");
+        return succ;
     }
 }
