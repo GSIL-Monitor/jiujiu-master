@@ -1,7 +1,6 @@
 package com.jiu.common.aspect;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
@@ -16,7 +15,6 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class SystemLogAspect {
 
-    private final static Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
     //切点
     @Pointcut(value = ("@annotation(com.jiu.common.annotation.LogAnnotation)"))
     public void annotation() {}
@@ -40,7 +38,7 @@ public class SystemLogAspect {
                     params += joinPoint.getArgs()[i] + ";";
                     continue;
                 }else{
-                    params += gson.toJson(joinPoint.getArgs()[i]) + ";";
+                    params += JSON.toJSONString(joinPoint.getArgs()[i]) + ";";
                 }
             }
         }
