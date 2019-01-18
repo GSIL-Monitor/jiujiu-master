@@ -1,7 +1,6 @@
 package com.jiu.common.config;
 
 import com.jiu.common.Interceptor.WebInterceptor;
-import org.aspectj.lang.annotation.Before;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
