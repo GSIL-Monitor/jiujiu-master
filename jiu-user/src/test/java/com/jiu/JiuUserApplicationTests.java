@@ -1,5 +1,6 @@
 package com.jiu;
 
+import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.AbstractWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -39,7 +40,7 @@ public class JiuUserApplicationTests {
     public void selectAll() {
         log.info("selectAll...");
         List<TUser> list = userMapper.selectList(null);
-        list.forEach(System.out::print);
+        System.out.println(JSON.toJSONString(list));
     }
 
     @Test
