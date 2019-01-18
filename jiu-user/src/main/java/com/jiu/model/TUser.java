@@ -35,8 +35,8 @@ public class TUser implements Serializable {
 
     private String phone;
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")//入参格式化
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")//json返回格式化 配合jar包使用
     private LocalDateTime createTime;
 
 
