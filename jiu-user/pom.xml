@@ -70,6 +70,11 @@
 			<artifactId>mybatis-plus-boot-starter</artifactId>
 			<version>3.0.1</version>
 		</dependency>
+		<!-- 解决引入mybatis plus ConfigurationProperties注解用不了的问题-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-configuration-processor</artifactId>
+		</dependency>
 		<!--mysql-->
 		<dependency>
 			<groupId>mysql</groupId>
