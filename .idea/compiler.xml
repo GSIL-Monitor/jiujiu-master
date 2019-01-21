@@ -17,13 +17,13 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-server" target="1.8" />
-      <module name="base-server" target="1.6" />
+      <module name="base-server" target="1.8" />
       <module name="config-server" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="jiu-app" target="1.8" />
       <module name="jiu-service-a" target="1.8" />
       <module name="jiu-user" target="1.8" />
-      <module name="jiujiu-master" target="1.6" />
+      <module name="jiujiu-master" target="1.8" />
       <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
