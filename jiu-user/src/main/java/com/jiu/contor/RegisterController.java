@@ -1,6 +1,7 @@
 package com.jiu.contor;
 
 import com.jiu.common.annotation.LogAnnotation;
+import com.jiu.common.exception.CustomException;
 import com.jiu.model.TUser;
 import com.jiu.service.RegisterService;
 import com.jiu.util.MailUtil;
@@ -66,15 +67,24 @@ public class RegisterController {
     }
 
 
-
     @RequestMapping(value = "/log")
     @ResponseBody
-    public String log(){
+    public String log() {
         log.trace("trace");
         log.debug("debug");
         log.info("info");
         log.warn("warn");
         log.error("error");
         return "success";
+    }
+
+    @GetMapping("/ex")
+    @ResponseBody
+    public String ex(Integer num) {
+        if (num == null) {
+            throw new CustomException(400, "num不能为空");
+        }
+        int i = 10 / num;
+        return "result:" + i;
     }
 }

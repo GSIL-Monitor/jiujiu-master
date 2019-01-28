@@ -9,33 +9,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-@ConfigurationProperties(prefix = "rocketmq")
+@ConfigurationProperties
 @Configuration
 public class RocketmqProperties {
 
-    @Value("${namesrvAddr}")
+    @Value("${rocketmq.namesrvAddr}")
     private String namesrvAddr;
-    @Value("${producerGroupName}")
+    @Value("${rocketmq.producerGroupName}")
     private String producerGroupName;
-    @Value("${transactionProducerGroupName}")
+    @Value("${rocketmq.transactionProducerGroupName}")
     private String transactionProducerGroupName;
-    @Value("${consumerGroupName}")
+    @Value("${rocketmq.consumerGroupName}")
     private String consumerGroupName;
-    @Value("${producerInstanceName}")
+    @Value("${rocketmq.producerInstanceName}")
     private String producerInstanceName;
-    @Value("${consumerInstanceName}")
+    @Value("${rocketmq.consumerInstanceName}")
     private String consumerInstanceName;
-    @Value("${producerTranInstanceName}")
+    @Value("${rocketmq.producerTranInstanceName}")
     private String producerTranInstanceName;
-    @Value("${consumerBatchMaxSize}")
+    @Value("${rocketmq.consumerBatchMaxSize}")
     private int consumerBatchMaxSize;
-    @Value("${consumerBroadcasting}")
+    @Value("${rocketmq.consumerBroadcasting}")
     private boolean consumerBroadcasting;
-    @Value("${enableHistoryConsumer}")
+    @Value("${rocketmq.enableHistoryConsumer}")
     private boolean enableHistoryConsumer;
-    @Value("${enableOrderConsumer}")
+    @Value("${rocketmq.enableOrderConsumer}")
     private boolean enableOrderConsumer;
-    @Value("${subscribe[0]}")
+    @Value("${rocketmq.subscribe[0]}")
     private List<String> subscribe = new ArrayList<String>();
 
 }
