@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.jiu.mapper.TUserMapper;
 import com.jiu.model.TUser;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,12 +17,12 @@ import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class JiuUserApplicationTests {
@@ -38,27 +37,27 @@ public class JiuUserApplicationTests {
 
     @Test
     public void selectAll() {
-        log.info("selectAll...");
+        System.out.println("selectAll...");
         List<TUser> list = userMapper.selectList(null);
         System.out.println(JSON.toJSONString(list));
     }
 
     @Test
     public void addUser() {
-        log.info("addUser...");
+        System.out.println("addUser...");
         TUser user = new TUser();
         user.setUserName("lukai111111");
         user.setPassWord("12345634234");
         user.setPhone("19908623115");
         int i = userMapper.insert(user);
-        log.info("插入" + i + "条");
+        System.out.println("插入" + i + "条");
     }
 
     @Test
     public void selectPage() {
         IPage page = new Page(2, 1);
         IPage<TUser> iPage = userMapper.selectPage(page, null);
-        log.info("total==>" + iPage.getTotal());
+        System.out.println("total==>" + iPage.getTotal());
         iPage.getRecords().forEach(System.out::println);
     }
 
@@ -106,5 +105,13 @@ public class JiuUserApplicationTests {
             System.out.println("exists is false");
         }
         // Assert.assertEquals("aa", operations.get("com.neo.f").getUserName());
+    }
+
+
+    @Test
+    public void calc(){
+        BigDecimal b1 = new BigDecimal("30000");
+        BigDecimal b2 = new BigDecimal("100000");
+        System.out.println(b1.divide(b2).setScale(4, BigDecimal.ROUND_HALF_UP));
     }
 }
